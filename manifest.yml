@@ -1,3 +1,4 @@
+---
 applications:
 - services:
   - foosbuzz-cloudantNoSQLDB
@@ -5,18 +6,16 @@ applications:
   - foosbuzz-IoT
   memory: 512M
   instances: 1
-  domain: mybluemix.net
-  name: foosbuzz
-  host: foosbuzz
+  name: eriefoosball
+  host: eriefoosball
   disk_quota: 1024M
-
 declared-services:
   foosbuzz-cloudantNoSQLDB:
     label: cloudantNoSQLDB
-    plan:  Shared
+    plan: Shared
   foosbuzz-textToSpeech:
-    label: text_to_speech 
-    plan:  standard
+    label: text_to_speech
+    plan: standard
   foosbuzz-IoT:
     label: iotf-service
-    plan:  iotf-service-free
+    plan: iotf-service-free
