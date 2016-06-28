@@ -53,8 +53,8 @@ var client = new Client();
 var team = 1;
 
 passport.use(new StrategyTwit({
-    consumerKey: "lGFcVJeYXUsqP45SxzIiYpHKo",
-    consumerSecret: "4nnFwklZD26xNCnIkpuMFosxLyuviqLPDrY2EoCD9z26ChVrVZ",
+    consumerKey: "PRIVATE_KEY_GO_AWAY",
+    consumerSecret: "PRIVATE_SECRET_SHOO",
     callbackURL: "http://eriefoosball.mybluemix.net/login/twitter/return"
   },
   function(token, tokenSecret, player, cb) {
@@ -80,8 +80,8 @@ passport.use(new StrategyTwit({
 
 // Update the credentials with the information from your LinkedIn app 
 passport.use(new StrategyLink({
-    consumerKey: "778wb3k06jddgt",
-    consumerSecret: "Ypiny4zUvf8l3axT",
+    consumerKey: "SECRET_SECRETS_ARE_NO_FUN",
+    consumerSecret: "SECRET_SECRETS_HURT_SOMEONE",
     callbackURL: "https://eriefoosball.mybluemix.net/login/linkedin/return",
     profileFields: ['id', 'formatted-name', 'picture-urls::(original)']
   },
