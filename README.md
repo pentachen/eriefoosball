@@ -1,6 +1,7 @@
 # ERIE Foosball
 A Raspberry Pi wired Foosball table that uses the Watson IoT Foundation, Cloudant, and Node-RED.
-Built on top of the Foosbuzz team's original code in IBM Bluemix.
+Built on top of the Foosbuzz team's original code.
+Developed and hosted on IBM Bluemix.  Cloned from jazz.net to github.
 
 ## Getting the Code Running
 This is a demo application so the bulk of the code is a series of Node-RED flows.  It is recommended that 
