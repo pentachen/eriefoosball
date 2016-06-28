@@ -1,6 +1,6 @@
 {
     "name"         : "foosbuzz",
-    "version"      : "0.2.0",
+    "version"      : "0.2.1",
     "description"  :  "A wired foosball table connected to the IBM Watson IoT foundation and powered by Cloudant, Node-RED, and the Watson Developer Cloud.",
     "contributors": [{
         "name": "Stefania Kaczmarczyk",
@@ -9,7 +9,12 @@
         {
         "name": "Oliver Rodriquez",
         "email": "odrodrig@us.ibm.com"
-        }],
+        },
+        {
+        "name": "Benjamin Chen",
+        "email": "benjamin.chen@erieinsurance.com"
+        }
+        ],
     "scripts": {
         "start": "node server.js",
         "admin": "node-red-admin "
@@ -39,7 +44,8 @@
         "js2xmlparser":"~0.1.3",
         "getmac":"1.0.x",
         "passport":"*",
-        "passport-twitter":"*"
+        "passport-twitter":"*",
+        "passport-linkedin":"*"
     },
     "engines": {
         "node": "0.10.x"

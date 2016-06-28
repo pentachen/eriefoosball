@@ -1,13 +1,15 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>FoosBuzz | Powered by Bluemix</title>
+<title>ERIE Foosball</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 <link rel="stylesheet" href="assets/css/main.css" />
 <link rel="stylesheet" href="assets/css/game.css" />
 <link rel="stylesheet" href="assets/css/jquery.dataTables.min.css" />
+<link rel="stylesheet" href="assets/css/mods.css" />
+<link rel="icon" href="images/ei_foosball.ico" />
 <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 </head>
@@ -15,7 +17,8 @@
 
 <!-- Scrolling Navigation Bar -->
 <section id="scrollnav" class="alt">
-  <h1><a href="index.html">FoosBuzz</a></h1>
+  <h1><a href="https://twitter.com/foosbuzz">FoosBuzz</a><a> | </a>
+      <a href="https://www.erieinsurance.com/">Erie Insurance</a></h1>
   <nav id="nav">
     <ul>
       <li><a href="https://console.ng.bluemix.net/" class="icon fa-code">Bluemix</a></li>
@@ -27,9 +30,9 @@
 
 <!-- Header -->
 <section id="header">
-  <div class="inner"> <span class="icon major fa-soccer-ball-o"></span>
-    <h1>FoosBuzz</h1>
-    <h3>An Internet of Things Foosball Game</h3>
+  <div class="inner"> <img src="images/ei_foosball_white.png" id="mainIcon"></img>
+    <h1>Erie Insurance IoT Foosball Demo</h1>
+    <h3>Website sourced from FoosBuzz</h3>
     <p>Powered by Bluemix, Raspberry Pi, Node-RED, Cloudant, and Node.js</p>
     <ul class="actions">
       <li><a href="#game" class="button scrolly icon fa-soccer-ball-o">Play/Watch</a></li>
@@ -47,9 +50,10 @@
       <div class="4u 12u$(medium) player">
         <div id="teamOne"> <img class="avatar" id="imageOne" src="images/player.svg" />
           <h2 id="nameOne">Captain One</h2>
-          <a id="LoginButtonOne" class="button special icon fa-twitter" href="/login1">Login</a>
+          <a id="LoginButtonOne" class="button special icon fa-linkedin" href="/login1">Login</a>
+          <a id="LoginButtonOneT" class="button special icon fa-twitter" href="/login1t">Login</a>
           <div id="details">
-            <h3 id="probVal"><span id="probTeamOne">0.00%</span><br />
+            <h3 id="probVal"><span id="probTeamOne">50.00%</span><br />
             <strong>Chance Of Winning</strong></h3>
           </div>
         </div>
@@ -58,15 +62,16 @@
       <div class="4u 12u$(medium)" id="scoreboard">
       <h3>Game Score</h3>
       <h2 id="ScoreOne" class="score">0</h2>
-      <h2 id="ScoreTwo" class+"score">0</h2>
+      <h2 id="ScoreTwo" class="score">0</h2>
       </div>
       <!-- Player Two Block -->
       <div class="4u 12u$(medium) player">
         <div id="teamTwo"> <img class="avatar" id="imageTwo" src="images/player.svg" />
           <h2 id="nameTwo">Captain Two</h2>
-          <a id="LoginButtonTwo" class="button special icon fa-twitter" href="/login2">Login</a>
+          <a id="LoginButtonTwo" class="button special icon fa-linkedin" href="/login2">Login</a>
+          <a id="LoginButtonTwoT" class="button special icon fa-twitter" href="/login2t">Login</a>
           <div id="details">
-            <h3 id="probVal"><span id="probTeamTwo">0.00%</span><br />
+            <h3 id="probVal"><span id="probTeamTwo">50.00%</span><br />
             <strong>Chance Of Winning</strong></h3>
           </div>
         </div>
@@ -100,8 +105,8 @@
       <h2>FoosBuzz League</h2>
     </header>
     			<div class="container" id="index">
-				GP = Goals Played | W = Wins | L = Losses | GF:GA = Goals For : Goals Against
-				| GD = Goal Difference | PTS = Points || Win = +3 Points | Loss = -2 Points
+				GP = Games Played | W = Wins | L = Losses | GF:GA = Goals For : Goals Against
+				| GD = Goal Difference | PTS = Points | Win = +3 Points | Loss = -2 Points
                 <br /><br />
 			</div>
 		</div>
@@ -111,15 +116,17 @@
 			<table id="leaguetable" class="display table" id="table_id">
 				<thead>
 				<tr>
-					<th id ="center">Photo</th>
-					<th id ="center">User</th>
-					<th id ="center">Twitter</th>
-					<th id ="center">GP</th>
-					<th id ="center">W</th>
- 					<th id ="center">L</th>
- 					<th id ="center">GF:GA</th>
-					<th id ="center">GD</th>
-					<th id ="center">PTS</th>
+					<!-- ORIGINALLY WAS
+					<th id ="center"> -->
+					<th class="centerThisPls">Photo</th>
+					<th class="centerThisPls">User</th>
+					<th class="centerThisPls">Twitter</th>
+					<th class="centerThisPls">GP</th>
+					<th class="centerThisPls">W</th>
+ 					<th class="centerThisPls">L</th>
+ 					<th class="centerThisPls">GF:GA</th>
+					<th class="centerThisPls">GD</th>
+					<th class="centerThisPls">PTS</th>
 				</tr>
 				</thead>
 				<tbody>

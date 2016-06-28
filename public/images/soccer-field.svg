@@ -1,25 +1,48 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="1150" height="720" xmlns="http://www.w3.org/2000/svg">
- <title>soccer_field</title>
- <g>
-  <title>Layer 1</title>
-  <rect id="svg_1" fill="#00AED1" height="720" width="1150" y="0" x="0"/>
-  <path id="svg_2" fill="#00AED1" stroke-width="5" stroke="White" d="m575,20l-525,0l0,680l1050,0l0,-680l-525,0l0,680l0,-680z"/>
-  <circle id="svg_3" fill-opacity="0" stroke-width="5" stroke="White" r="91.5" cy="360" cx="575"/>
-  <circle id="svg_4" fill="White" stroke="White" r="2" cy="360" cx="575"/>
-  <circle id="svg_5" fill="White" stroke="White" r="2" cy="360" cx="160"/>
-  <circle id="svg_6" fill="White" stroke="White" r="2" cy="360" cx="990"/>
-  <path id="svg_7" fill-opacity="0" stroke-width="5" stroke="White" d="m50,324.399994l-10,0l0,72.200012l10,0l0,-72.200012z"/>
-  <path id="svg_8" fill-opacity="0" stroke-width="5" stroke="White" d="m1100,324.399994l10,0l0,72.200012l-10,0l0,-72.200012z"/>
-  <path id="svg_9" fill-opacity="0" stroke-width="5" stroke="White" d="m50,269.399994l55,0l0,182.200012l-55,0l0,-182.200012z"/>
-  <path id="svg_10" fill-opacity="0" stroke-width="5" stroke="White" d="m1100,269.399994l-55,0l0,182.200012l55,0l0,-182.200012z"/>
-  <path id="svg_11" fill-opacity="0" stroke-width="5" stroke="White" d="m50,159.399994l165,0l0,402.199982l-165,0l0,-402.199982z"/>
-  <path id="svg_12" fill-opacity="0" stroke-width="5" stroke="White" d="m1100,159.399994l-165,0l0,402.199982l165,0l0,-402.199982z"/>
-  <path id="svg_13" fill="#00AED1" stroke-width="5" stroke="White" d="m215,286.875a91.5,91.5 0 0 1 0,146.25l0,-146.25z"/>
-  <path id="svg_14" fill="#00AED1" stroke-width="5" stroke="White" d="m935,286.875a91.5,91.5 0 0 0 0,146.25l0,-146.25z"/>
-  <path id="svg_15" fill-opacity="0" stroke-width="5" stroke="White" d="m50,30a10,10 0 0 0 10,-10l-10,0l0,10z"/>
-  <path id="svg_16" fill-opacity="0" stroke-width="5" stroke="White" d="m60,700a10,10 0 0 0 -10,-10l0,10l10,0z"/>
-  <path id="svg_17" fill-opacity="0" stroke-width="5" stroke="White" d="m1100,690a10,10 0 0 0 -10,10l10,0l0,-10z"/>
-  <path id="svg_18" fill-opacity="0" stroke-width="5" stroke="White" d="m1090,20a10,10 0 0 0 10,10l0,-10l-10,0z"/>
- </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="36 171 683 452" enable-background="new 36 171 683 452" xml:space="preserve">
+<g>
+	<title>background</title>
+	<rect id="canvas_background" x="35" y="170" fill="none" width="685" height="454"/>
+</g>
+<g>
+	<title>Layer 1</title>
+	<g id="g2174" transform="rotate(90, 339.723, 226.521)" opacity="0.65">
+		
+			<rect id="rect7516" x="164.1" y="-37.5" transform="matrix(2.578893e-006 1 -1 2.578893e-006 701.243 -320.2028)" fill="#00AED1" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square" width="693.2" height="456.1"/>
+		<path id="path2239" fill="none" stroke="#FFFFFF" stroke-width="3" d="M296.2-131.7V507h429.5v-638.8
+			C725.7-131.8,296.2-131.7,296.2-131.7z"/>
+		<path id="path3116" fill="none" stroke="#FFFFFF" stroke-width="3" d="M389.9-131.3v98.7h242.2v-99.2"/>
+		<path id="path3118" fill="none" stroke="#FFFFFF" stroke-width="3" d="M456.3-131.8v33h109.3v-33"/>
+		<path id="path3120" fill="none" stroke="#FFFFFF" stroke-width="3" d="M389.9,506.3v-98.7h242.2v99.2"/>
+		<path id="path3122" fill="none" stroke="#FFFFFF" stroke-width="3" d="M456.3,506.7v-33h109.3v33"/>
+		<path id="path3124" fill="none" stroke="#FFFFFF" stroke-width="3" d="M296.1,187.6h429.5"/>
+		<g>
+			<path id="path3142" fill="none" stroke="#FFFFFF" stroke-width="3" d="M565.8,187.6c0,30.3-24.5,54.8-54.8,54.8
+				c-30.3,0-54.8-24.5-54.8-54.8c0,0,0,0,0,0c0-30.3,24.5-54.8,54.8-54.8C541.2,132.8,565.8,157.3,565.8,187.6
+				C565.8,187.5,565.8,187.6,565.8,187.6z"/>
+		</g>
+		<path id="path3994" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square" d="M489.1,507.9v14.7h43.8v-14.9"/>
+		<path id="path4869" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square" d="M489.1-132.8v-14.7h43.8v14.9"/>
+		<path id="path5748" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square" d="M512.8,439.6c0,1-0.8,1.8-1.8,1.8
+			s-1.8-0.8-1.8-1.8s0.8-1.8,1.8-1.8S512.8,438.6,512.8,439.6z"/>
+		<path id="path5750" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square" d="M512.8-64.6c0,1-0.8,1.8-1.8,1.8
+			s-1.8-0.8-1.8-1.8s0.8-1.8,1.8-1.8S512.8-65.6,512.8-64.6z"/>
+		<path id="path5756" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square" d="M296.6,501.5
+			c2.8,0.1,5,2.4,5.1,5.2"/>
+		<path id="path6631" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square" d="M297.1-125.5
+			c0.1-2.8,2.3-5.1,5.1-5.2"/>
+		<path id="path6633" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square" d="M724.8-125.7
+			c-2.8-0.1-5-2.4-5.1-5.2"/>
+		<path id="path6635" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square" d="M724.8,500.9
+			c-0.1,2.8-2.3,5.1-5.1,5.2"/>
+		<path id="path6637" fill="none" stroke="#FFFFFF" stroke-width="3" d="M466.4,407.4c17.7-24.6,51.9-30.2,76.5-12.5
+			c4.9,3.5,9.1,7.8,12.6,12.7"/>
+		<g>
+			<path id="path6641" fill="none" stroke="#FFFFFF" stroke-width="3" d="M555.5-32.3c-3.5,4.9-7.8,9.1-12.7,12.6
+				C518.2-2.1,484-7.8,466.4-32.4"/>
+		</g>
+	</g>
+</g>
 </svg>

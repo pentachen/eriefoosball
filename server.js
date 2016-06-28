@@ -18,7 +18,8 @@ var http    = require('http'),
     express = require("express"),
     RED     = require("node-red"),
     passport = require('passport'),
-    Strategy = require('passport-twitter').Strategy
+    StrategyTwit = require('passport-twitter').Strategy,
+    StrategyLink = require('passport-linkedin').Strategy
 ;
 
 // Create an Express app
@@ -51,11 +52,10 @@ var client = new Client();
  */
 var team = 1;
 
-// Update the credentials with the information from your Twitter app 
-passport.use(new Strategy({
-    consumerKey: "TWITTER CONSUMER KEY",
-    consumerSecret: "TWITTER CONSUMER SECRET",
-    callbackURL: "http://yourwebsite.com/login/twitter/return"
+passport.use(new StrategyTwit({
+    consumerKey: "lGFcVJeYXUsqP45SxzIiYpHKo",
+    consumerSecret: "4nnFwklZD26xNCnIkpuMFosxLyuviqLPDrY2EoCD9z26ChVrVZ",
+    callbackURL: "http://eriefoosball.mybluemix.net/login/twitter/return"
   },
   function(token, tokenSecret, player, cb) {
     
@@ -70,9 +70,32 @@ passport.use(new Strategy({
 	   headers: { "Content-Type": "application/json" }
 	};
 	   
-	client.post("http://yourwebsite.com/player", args, function (data, response) {
-		//console.log(data);
-		//console.log(response);
+	client.post("https://eriefoosball.mybluemix.net/player", args, function (data, response) {
+		console.log(data);
+		console.log(response);
+	});
+  	
+    return cb(null, player);
+}));
+
+// Update the credentials with the information from your LinkedIn app 
+passport.use(new StrategyLink({
+    consumerKey: "778wb3k06jddgt",
+    consumerSecret: "Ypiny4zUvf8l3axT",
+    callbackURL: "https://eriefoosball.mybluemix.net/login/linkedin/return",
+    profileFields: ['id', 'formatted-name', 'picture-urls::(original)']
+  },
+  function(token, tokenSecret, player, cb) {
+	
+	// Let Node-RED know there has been a successful login and send the profile data for further processing
+  	var args = {
+	   data: {id:player.id,handle:"N/A",name:player._json.formattedName,photo:player._json.pictureUrls.values[0],chosenTeam:team},
+	   headers: { "Content-Type": "application/json" }
+	};
+	   
+	client.post("https://eriefoosball.mybluemix.net/player", args, function (data, response) {
+		console.log(data);
+		console.log(response);
 	});
   	
     return cb(null, player);
@@ -91,25 +114,48 @@ passport.deserializeUser(function(obj, cb) {
 app.use(passport.initialize());
 app.use(passport.session());
 
+//LINKEDIN
 // Manually handling login for each side with a login1 and login2
 app.get('/login1', function(req, res) {
+	team = 1;
+	res.redirect('/login/linkedin');
+});
+
+app.get('/login2', function(req, res) {
+	team = 2;
+	res.redirect('/login/linkedin');
+});
+
+//TWITTER
+// Manually handling login for each side with a login1t and login2t
+app.get('/login1t', function(req, res) {
 	team = 1;
 	res.redirect('/login/twitter');
 });
 
-app.get('/login2',function(req, res) {
+app.get('/login2t', function(req, res) {
 	team = 2;
 	res.redirect('/login/twitter');
 });
 
-app.get('/login/twitter',passport.authenticate('twitter'));
+app.get('/login/twitter',passport.authenticate('twitter', { forceLogin: true }));
+app.get('/login/linkedin',passport.authenticate('linkedin'));
 
 app.get('/login/twitter/return', 
   passport.authenticate('twitter', { failureRedirect: '/' }),
   function(req, res) {
-  req.logout();
-  res.redirect('/');
-});
+    req.logout();
+    res.redirect('/');
+  });
+
+app.get('/login/linkedin/return', 
+  passport.authenticate('linkedin', { failureRedirect: '/' }),
+  function(req, res) {
+//    req.logout();
+    req.session.destroy(); //StackOverflow said to use this;
+    res.redirect('/');
+  });
+
  
 /*
  * Begin set-up for the Node-RED directory.  There are a few key differences between a vanilla install of Node-RED
@@ -123,7 +169,7 @@ var settings = {
     serialReconnectTime: 4000,
     debugMaxLength: 1000,
 	
-	// Basic flow protection, password is password using bcrypt algorithim 
+	// Basic flow protection, password is password using bcrypt algorithm 
 	adminAuth: {
         type: "credentials",
         users: [{

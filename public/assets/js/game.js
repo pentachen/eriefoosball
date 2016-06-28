@@ -177,7 +177,7 @@ $(document).ready(function() {
                     console.log("Game win received");
                     gameWin(data);
                 break;
-                case "endGame":
+                case "gameEnd":
                     console.log("Ending game");
                     gameEnd();
                 break;
@@ -224,7 +224,9 @@ $(document).ready(function() {
                 $("#imageTwo").attr("src", res.userTeamTwoPhoto);
                 $("#ScoreTwo").html(res.goalsTeamTwo);
                 $('#LoginButtonOne').hide();
+                $('#LoginButtonOneT').hide();
                 $('#LoginButtonTwo').hide();
+                $('#LoginButtonTwoT').hide();
                 $("#end").show();
                 
 
@@ -341,6 +343,7 @@ $(document).ready(function() {
             $("#imageTwo").attr("class","avatar alt");
             //Hide login button to prevent others from logging in
             $('#LoginButtonOne').hide();
+            $('#LoginButtonOneT').hide();
             timeline_data.push({
                 date: new Date(),
                 title: 'Team ' + team1 + ' Logged In',
@@ -359,6 +362,7 @@ $(document).ready(function() {
             $("#imageTwo").attr("class","avatar alt");
             //Hide login button to prevent others from logging in
             $('#LoginButtonTwo').hide();
+            $('#LoginButtonTwoT').hide();
             timeline_data.push({
                 date: new Date(),
                 title: 'Team ' + team2 + ' Logged In',
@@ -436,6 +440,7 @@ $(document).ready(function() {
         $("#image" + text).attr("src", '../images/player.svg');
         $("#image" + text).attr("class","avatar");
         $('#LoginButton' + text).show();
+        $('#LoginButton' + text + "T").show();
     }
     
     //Setup for all new timeline events
