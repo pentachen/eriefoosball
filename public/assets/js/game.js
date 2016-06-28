@@ -177,7 +177,7 @@ $(document).ready(function() {
                     console.log("Game win received");
                     gameWin(data);
                 break;
-                case "gameEnd":
+                case "gameEnd": //originally endGame
                     console.log("Ending game");
                     gameEnd();
                 break;
